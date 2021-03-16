@@ -36,7 +36,22 @@ import UIKit.UIImage
 public class WeatherViewModel {
   static let defaultAddress = "McGaheysville, VA"
   private let geocoder = LocationGeocoder()
+  private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE, MMM d"
+    return dateFormatter
+  }()
+  private let tempFormatter: NumberFormatter = {
+    let tempFormatter = NumberFormatter()
+    tempFormatter.numberStyle = .none
+    return tempFormatter
+  }()
+  
   let locationName = Box("Loading...")
+  let date = Box(" ")
+  let icon: Box<UIImage?> = Box(nil)
+  let summary = Box(" ")
+  let forcastSummary = Box(" ")
   
   init() {
     changeLocation(to: Self.defaultAddress)
@@ -53,6 +68,11 @@ public class WeatherViewModel {
         self.fetchWeatherForLocation(location)
         return
       }
+      self.locationName.value = "Not found"
+      self.date.value = ""
+      self.icon.value = nil
+      self.summary.value = ""
+      self.forcastSummary.value = ""
     }
   }
   
@@ -61,6 +81,11 @@ public class WeatherViewModel {
       guard let self = self, let weatherData = weatherData else {
         return
       }
+      self.date.value = self.dateFormatter.string(from: weatherData.date)
+      self.icon.value = UIImage(named: weatherData.iconName)
+      let temp = self.tempFormatter.string(from: weatherData.currentTemp as NSNumber) ?? ""
+      self.summary.value = "\(weatherData.description) - \(temp)℉"
+      self.forcastSummary.value = "\nSummary: \(weatherData.description)"
     }
   }
 }

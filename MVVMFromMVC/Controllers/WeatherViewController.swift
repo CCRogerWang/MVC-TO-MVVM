@@ -31,16 +31,7 @@ import UIKit
 class WeatherViewController: UIViewController {
   
   
-  private let dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE, MMM d"
-    return dateFormatter
-  }()
-  private let tempFormatter: NumberFormatter = {
-    let tempFormatter = NumberFormatter()
-    tempFormatter.numberStyle = .none
-    return tempFormatter
-  }()
+  
   private let viewModel = WeatherViewModel()
   
   @IBOutlet weak var cityLabel: UILabel!
@@ -52,6 +43,18 @@ class WeatherViewController: UIViewController {
   override func viewDidLoad() {
     viewModel.locationName.bind { [weak self](locationName) in
       self?.cityLabel.text = locationName
+    }
+    viewModel.date.bind { [weak self](date) in
+      self?.dateLabel.text = date
+    }
+    viewModel.icon.bind { [weak self](image) in
+      self?.currentIcon.image = image
+    }
+    viewModel.summary.bind { [weak self](summary) in
+      self?.currentSummaryLabel.text = summary
+    }
+    viewModel.forcastSummary.bind { [weak self](forecast) in
+      self?.forecastSummary.text = forecast
     }
   }
 }
