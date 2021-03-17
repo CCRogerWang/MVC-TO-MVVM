@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import RxSwift
 
 class WeatherViewController: UIViewController {
   
@@ -40,22 +41,49 @@ class WeatherViewController: UIViewController {
   @IBOutlet weak var currentSummaryLabel: UILabel!
   @IBOutlet weak var forecastSummary: UITextView!
   
+  var disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
-    viewModel.locationName.bind { [weak self](locationName) in
+//    viewModel.locationName.bind { [weak self](locationName) in
+//      self?.cityLabel.text = locationName
+//    }
+    viewModel.locationName.subscribe { [weak self](locationName) in
       self?.cityLabel.text = locationName
-    }
-    viewModel.date.bind { [weak self](date) in
-      self?.dateLabel.text = date
-    }
-    viewModel.icon.bind { [weak self](image) in
-      self?.currentIcon.image = image
-    }
-    viewModel.summary.bind { [weak self](summary) in
-      self?.currentSummaryLabel.text = summary
-    }
-    viewModel.forcastSummary.bind { [weak self](forecast) in
-      self?.forecastSummary.text = forecast
-    }
+    }.disposed(by: self.disposeBag)
+    
+//    viewModel.date.bind { [weak self](date) in
+//      self?.dateLabel.text = date
+//    }
+    viewModel.date
+      .subscribe { [weak self] (date) in
+        self?.dateLabel.text = date
+      }
+      .disposed(by: self.disposeBag)
+//    viewModel.icon.bind { [weak self](image) in
+//      self?.currentIcon.image = image
+//    }
+    viewModel.icon
+      .subscribe { [weak self] (image) in
+        self?.currentIcon.image = image
+      }
+      .disposed(by: self.disposeBag)
+//    viewModel.summary.bind { [weak self](summary) in
+//      self?.currentSummaryLabel.text = summary
+//    }
+    viewModel.summary
+      .subscribe { [weak self] (summary) in
+        self?.currentSummaryLabel.text = summary
+      }
+      .disposed(by: self.disposeBag)
+//    viewModel.forcastSummary.bind { [weak self](forecast) in
+//      self?.forecastSummary.text = forecast
+//    }
+    viewModel.forcastSummary
+      .subscribe { [weak self] (forecast) in
+        self?.forecastSummary.text = forecast
+      }
+      .disposed(by: self.disposeBag)
+
   }
   
   @IBAction func promptForLocation(_ sender: Any) {

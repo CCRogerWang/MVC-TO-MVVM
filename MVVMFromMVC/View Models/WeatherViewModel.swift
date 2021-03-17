@@ -32,6 +32,7 @@
 
 import Foundation
 import UIKit.UIImage
+import RxSwift
 
 public class WeatherViewModel {
   static let defaultAddress = "McGaheysville, VA"
@@ -47,32 +48,44 @@ public class WeatherViewModel {
     return tempFormatter
   }()
   
-  let locationName = Box("Loading...")
-  let date = Box(" ")
-  let icon: Box<UIImage?> = Box(nil)
-  let summary = Box(" ")
-  let forcastSummary = Box(" ")
+  let locationName: BehaviorSubject<String> = BehaviorSubject(value: "")
+//  let date = Box(" ")
+//  let icon: Box<UIImage?> = Box(nil)
+//  let summary = Box(" ")
+//  let forcastSummary = Box(" ")
+  let date = BehaviorSubject<String>(value: "")
+  let icon = BehaviorSubject<UIImage?>(value: nil)
+  let summary = BehaviorSubject<String>(value: "")
+  let forcastSummary = BehaviorSubject<String>(value: "")
   
   init() {
     changeLocation(to: Self.defaultAddress)
   }
   
   func changeLocation(to newLocation: String) {
-    locationName.value = "Loading..."
+//    locationName.value = "Loading..."
+    showLoadingState()
+    
     geocoder.geocode(addressString: newLocation) { [weak self] (locations) in
       guard let self = self else {
         return
       }
       if let location = locations.first {
-        self.locationName.value = location.name
+//        self.locationName.value = location.name
+        self.locationName.on(.next(location.name))
         self.fetchWeatherForLocation(location)
         return
       }
-      self.locationName.value = "Not found"
-      self.date.value = ""
-      self.icon.value = nil
-      self.summary.value = ""
-      self.forcastSummary.value = ""
+//      self.locationName.value = "Not found"
+      self.locationName.on(.next("Not found"))
+//      self.date.value = ""
+//      self.icon.value = nil
+//      self.summary.value = ""
+//      self.forcastSummary.value = ""
+      self.date.on(.next("no date data"))
+      self.icon.on(.next(nil))
+      self.summary.on(.next("no summary data"))
+      self.forcastSummary.on(.next("no data"))
     }
   }
   
@@ -81,11 +94,24 @@ public class WeatherViewModel {
       guard let self = self, let weatherData = weatherData else {
         return
       }
-      self.date.value = self.dateFormatter.string(from: weatherData.date)
-      self.icon.value = UIImage(named: weatherData.iconName)
+//      self.date.value = self.dateFormatter.string(from: weatherData.date)
+//      self.icon.value = UIImage(named: weatherData.iconName)
+      self.date.on(.next(self.dateFormatter.string(from: weatherData.date)))
+      self.icon.on(.next(UIImage(named: weatherData.iconName)))
       let temp = self.tempFormatter.string(from: weatherData.currentTemp as NSNumber) ?? ""
-      self.summary.value = "\(weatherData.description) - \(temp)℉"
-      self.forcastSummary.value = "\nSummary: \(weatherData.description)"
+//      self.summary.value = "\(weatherData.description) - \(temp)℉"
+//      self.forcastSummary.value = "\nSummary: \(weatherData.description)"
+      self.summary.on(.next("\(weatherData.description) - \(temp)℉"))
+      self.forcastSummary.on(.next("\nSummary: \(weatherData.description)"))
     }
+  }
+  
+  /// set data to loading state
+  private func showLoadingState() {
+    locationName.onNext("Loading...")
+    date.onNext("")
+    icon.onNext(nil)
+    summary.onNext("")
+    forcastSummary.onNext("")
   }
 }

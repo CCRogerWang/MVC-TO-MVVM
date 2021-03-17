@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1507E7346BE698CC641AD8FD /* Pods_MVVMFromMVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D02B4CDB8D11B7DFA14B627 /* Pods_MVVMFromMVCTests.framework */; };
 		38159E9824352DD000819474 /* WeatherbitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38159E9724352DD000819474 /* WeatherbitData.swift */; };
 		38159E9A24352E8300819474 /* WeatherbitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38159E9924352E8300819474 /* WeatherbitService.swift */; };
 		3853FB7B237B8D1D00835B42 /* WeatherbitDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853FB7A237B8D1D00835B42 /* WeatherbitDataTests.swift */; };
@@ -15,6 +16,7 @@
 		3864C3EC237CB938000C9CA0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864C3EB237CB938000C9CA0 /* Location.swift */; };
 		3864C3EE237CC1F4000C9CA0 /* LocationGeocoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864C3ED237CC1F4000C9CA0 /* LocationGeocoderTests.swift */; };
 		3864C3F0237CC570000C9CA0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3864C3EF237CC570000C9CA0 /* WeatherViewController.swift */; };
+		4A25E09EC1B99DF54F725206 /* Pods_MVVMFromMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B3C13312509DA0A235CBF2 /* Pods_MVVMFromMVC.framework */; };
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
 		D2A5F2091F4A9144005CD714 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Weather.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
@@ -46,6 +48,10 @@
 		3864C3ED237CC1F4000C9CA0 /* LocationGeocoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationGeocoderTests.swift; sourceTree = "<group>"; };
 		3864C3EF237CC570000C9CA0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6167B8F45FE8BAE54B5AA5EA /* Pods-MVVMFromMVCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFromMVCTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMFromMVCTests/Pods-MVVMFromMVCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F658BF49B6E55CC7F49B2EE /* Pods-MVVMFromMVCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFromMVCTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMFromMVCTests/Pods-MVVMFromMVCTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D02B4CDB8D11B7DFA14B627 /* Pods_MVVMFromMVCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMFromMVCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4173CCA1945A01D2292764 /* Pods-MVVMFromMVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFromMVC.release.xcconfig"; path = "Target Support Files/Pods-MVVMFromMVC/Pods-MVVMFromMVC.release.xcconfig"; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* Grados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Weather.storyboard; sourceTree = "<group>"; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		DBC8573A2600432400094EAA /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		DBC8573E2600442D00094EAA /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		DBC8574226004E3400094EAA /* WeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModelTests.swift; sourceTree = "<group>"; };
+		EBC914C400A4BBF3291683F8 /* Pods-MVVMFromMVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFromMVC.debug.xcconfig"; path = "Target Support Files/Pods-MVVMFromMVC/Pods-MVVMFromMVC.debug.xcconfig"; sourceTree = "<group>"; };
+		F1B3C13312509DA0A235CBF2 /* Pods_MVVMFromMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMFromMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1507E7346BE698CC641AD8FD /* Pods_MVVMFromMVCTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A25E09EC1B99DF54F725206 /* Pods_MVVMFromMVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +131,18 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		5D63019E07D313A256B4A3D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBC914C400A4BBF3291683F8 /* Pods-MVVMFromMVC.debug.xcconfig */,
+				CE4173CCA1945A01D2292764 /* Pods-MVVMFromMVC.release.xcconfig */,
+				6167B8F45FE8BAE54B5AA5EA /* Pods-MVVMFromMVCTests.debug.xcconfig */,
+				6F658BF49B6E55CC7F49B2EE /* Pods-MVVMFromMVCTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6351BBCE23AE8A6A00B7C4DF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +159,23 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		AF99625FC5E4D63F8E3125DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1B3C13312509DA0A235CBF2 /* Pods_MVVMFromMVC.framework */,
+				9D02B4CDB8D11B7DFA14B627 /* Pods_MVVMFromMVCTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
 				D2A5F2021F4A9144005CD714 /* MVVMFromMVC */,
 				3853FB79237B8D1D00835B42 /* MVVMFromMVCTests */,
 				D2A5F2011F4A9144005CD714 /* Products */,
+				5D63019E07D313A256B4A3D7 /* Pods */,
+				AF99625FC5E4D63F8E3125DE /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -180,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3853FB7F237B8D1D00835B42 /* Build configuration list for PBXNativeTarget "MVVMFromMVCTests" */;
 			buildPhases = (
+				9CF041384B83A027A033475B /* [CP] Check Pods Manifest.lock */,
 				3853FB74237B8D1D00835B42 /* Sources */,
 				3853FB75237B8D1D00835B42 /* Frameworks */,
 				3853FB76237B8D1D00835B42 /* Resources */,
@@ -198,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A5F2121F4A9144005CD714 /* Build configuration list for PBXNativeTarget "MVVMFromMVC" */;
 			buildPhases = (
+				0F935B10E63EA5435207A321 /* [CP] Check Pods Manifest.lock */,
 				D2A5F1FC1F4A9144005CD714 /* Sources */,
 				D2A5F1FD1F4A9144005CD714 /* Frameworks */,
 				D2A5F1FE1F4A9144005CD714 /* Resources */,
+				27A49DCC5FBF88F56B8C31DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +307,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F935B10E63EA5435207A321 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMFromMVC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27A49DCC5FBF88F56B8C31DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMFromMVC/Pods-MVVMFromMVC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMFromMVC/Pods-MVVMFromMVC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMFromMVC/Pods-MVVMFromMVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF041384B83A027A033475B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMFromMVCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3853FB74237B8D1D00835B42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -329,6 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		3853FB80237B8D1D00835B42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6167B8F45FE8BAE54B5AA5EA /* Pods-MVVMFromMVCTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -353,6 +454,7 @@
 		};
 		3853FB81237B8D1D00835B42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F658BF49B6E55CC7F49B2EE /* Pods-MVVMFromMVCTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -488,6 +590,7 @@
 		};
 		D2A5F2131F4A9144005CD714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC914C400A4BBF3291683F8 /* Pods-MVVMFromMVC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -508,6 +611,7 @@
 		};
 		D2A5F2141F4A9144005CD714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4173CCA1945A01D2292764 /* Pods-MVVMFromMVC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
